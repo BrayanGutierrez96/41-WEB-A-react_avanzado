@@ -20,7 +20,7 @@ function EjemploUseEffect() {
   }, []);
 
   return (
-    <div className="w-screen h-screen bg-black text-white text-2xl pt-6 flex items-center flex-col gap-8">
+    <div className="flex flex-col gap-6">
       <h1 className="text-center text-4xl">Ejemplo useEffect</h1>
       <p className="text-center">{mensaje}</p>
     </div>

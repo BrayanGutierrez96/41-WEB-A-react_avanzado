@@ -1,7 +1,7 @@
 
 import {useState} from 'react'
 
-function useStateEjemplo() {
+function UseStateEjemplo() {
     const[color, setColor] = useState("red")
     const cambiarColor = () => {
       if(color !== "red"){
@@ -19,4 +19,4 @@ function useStateEjemplo() {
     )
 }
 
-export default useStateEjemplo
+export default UseStateEjemplo
