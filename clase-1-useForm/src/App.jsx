@@ -1,10 +1,7 @@
-import React from 'react'
-import Formulario from './components/formulario/Formulario'
+import EjemploUseEffect from "./components/ejemploUseEffect/EjemploUseEffect";
 
 function App() {
-  return (
-    <Formulario />
-  )
+  return <EjemploUseEffect />;
 }
 
-export default App
+export default App;
