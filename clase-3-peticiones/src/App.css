@@ -1,0 +1,22 @@
+.contenedor {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr );
+    gap: 10px;
+}
+
+.caja{
+    height: 100px;
+    background-color: red;
+}
+.caja1{
+    background-color: yellow;
+}
+.caja2{
+    background-color: green;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: repeat(1, 1fr );
+    }
+}
