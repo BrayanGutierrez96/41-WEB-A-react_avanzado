@@ -1,0 +1,58 @@
+# 📝 Ejercicio de Práctica: Métodos HTTP con Express
+
+En este ejercicio vamos a practicar los métodos **GET, POST, PUT, DELETE y ALL** usando Express.  
+La idea es crear un **mini servidor de tareas** que devuelva **mensajes de texto** (sin base de datos ni frontend).
+
+---
+
+## 🎯 Instrucciones
+
+1. Crea un archivo llamado `server.js` (o como prefieras).
+2. Configura un servidor con **Express**.
+3. Implementa las siguientes rutas:
+
+- **GET `/tasks`**  
+  Debe devolver el mensaje:  
+  ```
+  Mostrando todas las tareas
+  ```
+
+- **POST `/tasks`**  
+  Debe devolver el mensaje:  
+  ```
+  Nueva tarea creada
+  ```
+
+- **PUT `/tasks/:id`**  
+  Debe devolver el mensaje:  
+  ```
+  Tarea con id {id} actualizada
+  ```
+  (El `id` se obtiene de los **params**).
+
+- **DELETE `/tasks/:id`**  
+  Debe devolver el mensaje:  
+  ```
+  Tarea con id {id} eliminada
+  ```
+
+- **ALL `/tasks/*`**  
+  Debe devolver el mensaje:  
+  ```
+  Método no permitido en esta ruta
+  ```
+
+---
+
+## 💡 Pistas
+
+- Recuerda usar `req.params` para capturar el `id`.
+- Usa `res.send()` para devolver mensajes al cliente.
+- Con `app.all()` puedes atrapar métodos no definidos en esa ruta.
+- No necesitas base de datos, solo **respuestas de texto**.
+
+---
+
+## ✅ Objetivo final
+
+Que tu servidor responda de forma distinta según el método HTTP utilizado en la ruta `/tasks`.

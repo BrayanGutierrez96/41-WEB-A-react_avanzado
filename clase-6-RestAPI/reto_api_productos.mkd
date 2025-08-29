@@ -1,0 +1,55 @@
+# 📝 Reto de práctica: API de productos
+
+En este reto vas a practicar lo que vimos sobre **Express**, **CRUD** y el manejo básico de arrays en memoria.
+
+---
+
+## 🎯 Instrucciones
+
+1. Crea un proyecto con `npm init -y` e instala **Express**.
+   ```bash
+   npm i express
+   ```
+
+2. Crea un archivo `server.js` y copia un arreglo de productos como este:
+   ```js
+   let productos = [
+     { id: 1, nombre: "Camiseta", precio: 50, stock: 20 },
+     { id: 2, nombre: "Pantalón", precio: 100, stock: 15 },
+     { id: 3, nombre: "Zapatos", precio: 200, stock: 10 }
+   ];
+   ```
+
+3. Implementa las siguientes rutas:
+   - **GET /productos** → debe devolver todos los productos.
+   - **GET /productos/:id** → debe devolver un solo producto por su `id`.  
+     Si no existe, responde con `404`.
+   - **POST /productos** → debe permitir agregar un producto nuevo.  
+     ⚠️ El `id` debe calcularse con `reduce + Math.max` (no con `length`).
+   - **PUT /productos/:id** → debe permitir actualizar un producto.  
+     ⚠️ No se puede modificar el campo `id`.
+   - **DELETE /productos/:id** → debe eliminar un producto por su id.
+
+4. Prueba tus rutas con **Postman** o **Thunder Client**.
+
+---
+
+## 💡 Pistas
+- Usa `parseInt(req.params.id)` para convertir el id a número.
+- Si quieres probar `reduce`, aquí un ejemplo rápido:
+  ```js
+  const maxId = productos.reduce((max, p) => Math.max(max, p.id), 0);
+  ```
+- Para responder errores, puedes usar:
+  ```js
+  res.status(404).json({ mensaje: "Producto no encontrado" });
+  ```
+
+---
+
+## 🚀 Extra (opcional)
+Agrega una ruta **GET /stats** que devuelva:
+- El total de unidades en inventario (suma de todos los stocks).
+- El valor total del inventario (`precio * stock`).
+
+Esto se puede resolver con **reduce** 😉
