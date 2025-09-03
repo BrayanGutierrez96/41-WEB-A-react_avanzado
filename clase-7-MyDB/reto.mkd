@@ -1,0 +1,22 @@
+## Reto 📑
+
+En esta misma API, crear los endoints para:
+
+- Listar un solo usuario
+- Actualizar un usuario
+
+## Recomendaciones ✅
+
+- Usar el modelo que ya se generó para el usuario
+
+## Tips 👣
+
+- 👌 Usar el metodo `findByIdAndUpdate` para actualizar un usuario
+
+- 👌 Usar el metodo `findById` para obtener un usuario
+
+### Reto extra 👨‍💻
+
+- Mirar como se puede crear un ID único llamado `uniqueId` para cada usuario que empiece desde el numero 1 y que se incrementa en uno cada vez que se crea un nuevo usuario.
+
+- Evitar que se repita el `uniqueId`.
