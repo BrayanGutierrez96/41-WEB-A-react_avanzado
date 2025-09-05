@@ -1,0 +1,12 @@
+
+// HMAC = Hash-based Message Authentication Code
+// JWT = JSON Web Token
+// HS256 = HMAC using SHA-256 hash algorithm
+// H = HMAC
+// S = SHA
+// 256 = 256 bit
+// la libreria jsonwebtoken es una libreria que nos permite crear y validar tokens
+
+// RS256 = RSASSA-PKCS1-v1_5 using SHA-256 hash algorithm
+// PUBLIC KEY = PUBLIC KEY
+// PRIVATE KEY = PRIVATE KEY
